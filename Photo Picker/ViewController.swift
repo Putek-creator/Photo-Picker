@@ -14,6 +14,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate{
             print("No more photos")
         }else{
             photoCounter += 1
+            // i should make if with image name to compare in if than text
             if sender.titleLabel!.text == "Like"{
                 likePressedNumber += 1
                 showToast(message: "Number of given likes: \(likePressedNumber)")
@@ -26,6 +27,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate{
     }
     
     @IBAction func skipButtonPressed(_ sender: UIButton) {
+        // i should make if with image name to compare in if than text
         if sender.titleLabel!.text == "Next"{
             switch photoCounter{
             case maxPhotoNumber - 1:
